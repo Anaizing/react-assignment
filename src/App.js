@@ -23,12 +23,14 @@ class App extends Component {
   }
 
   render() {
+
     return <div className="App">
         <UserInput />
         <UserOutput 
-        name={this.state.usernames[0].name} 
-        onClick={this.switchNameHandler}/>
-        <UserOutput name={this.state.usernames[1].name} />
+          name={this.state.usernames[0].name} 
+          click={this.switchNameHandler.bind (this)} />
+        <UserOutput 
+        name={this.state.usernames[1].name} />
         <UserOutput name={this.state.usernames[2].name} />
       </div>;
   }
